@@ -1,0 +1,11 @@
+[package]
+name = "rust-webview-todomvc-yew"
+version = "0.1.0"
+authors = ["Stephan Dilly <dilly.stephan@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+web-view = "0.5.3"
+hyper="0.12"
+rust-embed = "5.1.0"
+futures = "0.1"
