@@ -1,3 +1,5 @@
+![screenshot](/image.png)
+
 ## rust todomvc desktop app
 
 Demo how to use [yew](https://github.com/yewstack/yew) for a [todomvc](http://todomvc.com) implementation written in **rust** that compiles to **wasm** and is bundled as a lightweight desktop app using [web-view](https://github.com/Boscop/web-view) and serves it's static files using [hyper](https://github.com/hyperium/hyper).
