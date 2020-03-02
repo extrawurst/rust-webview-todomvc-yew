@@ -3,10 +3,10 @@
 use serde_derive::{Deserialize, Serialize};
 use strum::IntoEnumIterator;
 use strum_macros::{EnumIter, ToString};
-use yew::events::IKeyboardEvent;
+use yew::events::KeyboardEvent;
 use yew::format::Json;
 use yew::services::storage::{Area, StorageService};
-use yew::{html, Component, ComponentLink, Href, Html, InputData, KeyPressEvent, ShouldRender};
+use yew::{html, Component, ComponentLink, Href, Html, InputData, ShouldRender};
 
 const KEY: &'static str = "yew.todomvc.self";
 
@@ -184,7 +184,7 @@ impl Model {
                    placeholder="What needs to be done?"
                    value=&self.state.value
                    oninput=self.link.callback(|e: InputData| Msg::Update(e.value))
-                   onkeypress=self.link.callback(|e: KeyPressEvent| {
+                   onkeypress=self.link.callback(|e: KeyboardEvent| {
                        if e.key() == "Enter" { Msg::Add } else { Msg::Nope }
                    }) />
             /* Or multiline:
@@ -227,7 +227,7 @@ impl Model {
                        value=&entry.description
                        oninput=self.link.callback(|e: InputData| Msg::UpdateEdit(e.value))
                        onblur=self.link.callback(move |_| Msg::Edit(idx))
-                       onkeypress=self.link.callback(move |e: KeyPressEvent| {
+                       onkeypress=self.link.callback(move |e: KeyboardEvent| {
                           if e.key() == "Enter" { Msg::Edit(idx) } else { Msg::Nope }
                        }) />
             }
