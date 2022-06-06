@@ -7,5 +7,5 @@ edition = "2018"
 [dependencies]
 web-view = "0.5.3"
 hyper="0.12"
-rust-embed = "5.1.0"
+rust-embed = "6.3.0"
 futures = "0.1"
